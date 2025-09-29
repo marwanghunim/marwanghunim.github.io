@@ -1,44 +1,270 @@
+/* 🌍 Reset e comportamento global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4f1ea;
-  margin: 0;
-  font-family: Arial, sans-serif;
+  color: #0a0a14;
 }
 
+/* 🧭 Cabeçalho fixo */
 header {
-  background-color: #d62828;
-  color: #ffffff;
+  background: linear-gradient(90deg, #003566, #0077b6);
+  color: #fff;
   text-align: center;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0, 53, 102, 0.4);
 }
 
-nav {
-  background-color: #003566;
-  padding: 10px;
-  text-align: center;
+/* 🌄 HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
 }
 
-nav a {
-  color: #fefefe;
+/* Menu dentro da hero */
+.menu {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #fff;
   text-decoration: none;
-  margin: 0 15px;
+  font-weight: bold;
+  background: rgba(0, 53, 102, 0.6);
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 53, 102, 0.3);
 }
 
-nav a:hover {
-  text-decoration: underline;
+.menu a:hover {
+  background: rgba(0, 119, 182, 0.7);
+  box-shadow: 0 0 15px rgba(0, 119, 182, 0.5);
 }
 
-main {
-  background-color: #ffc300;
-  margin: 20px auto;
-  padding: 20px;
-  width: 80%;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-footer {
-  background-color: #003566;
-  color: white;
+/* Conteúdo central da hero */
+.hero-content {
   text-align: center;
-  padding: 15px;
+  background: rgba(244, 241, 234, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 53, 102, 0.3);
+  color: #0a0a14;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #ffc300;
+  color: #d62828;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Botão call-to-action */
+.cta-btn {
+  background: linear-gradient(90deg, #d62828, #ffc300);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(214, 40, 40, 0.4);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 195, 0, 0.6);
+}
+
+/* 🧠 Projetos */
+.projetos {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #f4f1ea, #eae2b7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.projetos h2 {
+  font-size: 2.2rem;
+  color: #d62828;
+  margin-bottom: 15px;
+}
+
+.projetos p {
+  font-size: 1.1rem;
+  color: #003566;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 25px;
+  width: 240px;
+  box-shadow: 0 0 15px rgba(0, 53, 102, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+  color: #003566;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card a {
+  background: linear-gradient(90deg, #0077b6, #ffc300);
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  box-shadow: 0 0 15px rgba(0, 119, 182, 0.5);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255, 195, 0, 0.4);
+}
+
+/* Responsividade cards */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
+
+/* 📘 Disciplina */
+.disciplina {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f1ea, #eae2b7);
+  color: #0a0a14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.disciplina h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #0077b6;
+}
+
+/* Container com texto + imagem */
+.disciplina-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+}
+
+.disciplina .texto {
+  flex: 1;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.disciplina .texto p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.disciplina ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #d62828;
+}
+
+/* Imagem */
+.disciplina .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.disciplina .imagem img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 53, 102, 0.3);
+}
+
+/* Responsividade disciplina */
+@media (max-width: 768px) {
+  .disciplina-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .disciplina .texto {
+    text-align: center;
+  }
+
+  .disciplina .imagem img {
+    max-width: 80%;
+  }
+}
+
+/* ⚫ Rodapé */
+footer {
+  background: #003566;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 195, 0, 0.5);
 }
