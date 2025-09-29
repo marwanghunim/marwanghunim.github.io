@@ -1,49 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>MarwanGhunim</title>
-    <style>
-        img{
-            width: 300px;
-        }
-    </style>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Marwan Ghunim</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Primeira Página Web!</h1>
-    </header>
-    
-    <main>
-        <p>
-            Eis a minha primeira pagina Web!</p>
-            <p>
-                Na Unidade Curricular de
-                <a href = "https://moodle.ensinolusofona.pt/course/view.php?id=11232" target = "_blank">
-                    Desenvolvimento de Interfaces Web
-                </a>
-                abordaremos as seguintes tecnologias Web &#127760;:
-            </p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React e New.js</li>
-            </ul>
-            <p>Iremos criar soluções criativas!</p>
-            
-            <nav>
-                <ul>
-                    <li><a href="Lab 1/index.html"> Lab 1</a></li>
-                    <li><a href="Lab 2/index.html"> Lab 2</a></li>
-                </ul>
-            </nav>
-            <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
-    </main>
-    <footer>
-        <p>Universidade Lisboa 2025</p>
-    </footer>
-</body>
-</html>
+  <header>
+    <h1>Primeira Página Web!</h1>
+  </header>
+
+  <main>
+    <!-- 🌄 HERO SECTION (Início) -->
+    <section class="hero" id="inicio">
+      <!-- Menu de navegação interno -->
+      <nav class="menu">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#cadeira">Interfaces Web</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h2>Transforme Ideias em Realidade 🌟</h2>
+        <p>Crie, aprenda e inove com Desenvolvimento Web!</p>
+        <a href="#projetos" class="cta-btn">Ver Projetos</a>
+      </div>
+    </section>
+
+    <!-- 🧠 SECÇÃO PROJETOS -->
+<section class="projetos" id="projetos">
+  <h2>Projetos / Labs</h2>
+  <p>Alguns exercícios desenvolvidos ao longo da UC.</p>
+
+  <div class="cards-container">
+    <div class="card">
+      <h3>Lab 1</h3>
+      <p>Estrutura base e semântica</p>
+      <a href="Lab 1/index.html" target="_blank">Ver Projeto</a>
+    </div>
+
+    <div class="card">
+      <h3>Lab 2</h3>
+      <p>Estilos e layout responsivo</p>
+      <a href="Lab 2/index.html" target="_blank">Ver Projeto</a>
+    </div>
+
+    <div class="card">
+      <h3>Lab 3</h3>
+      <p>Interatividade com JS</p>
+      <a href="Lab 3/index.html" target="_blank">Ver Projeto</a>
+    </div>
+  </div>
+</section>
+
+    <!-- 📘 SECÇÃO DISCIPLINA -->
+<section class="disciplina" id="cadeira">
+  <h2>Desenvolvimento de Interfaces Web</h2>
+
+  <div class="disciplina-content">
+    <div class="texto">
+      <p>
+        Na Unidade Curricular de 
+        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank">
+          Desenvolvimento de Interfaces Web (DIW)
+        </a> 
+        abordaremos as seguintes tecnologias:
+      </p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React e Next.js</li>
+      </ul>
+      <p>
+        O objetivo é criar soluções criativas e funcionais para a Web, com foco em boas práticas e design responsivo.
+      </p>
+    </div>
+
+    <div class="imagem">
+      <img src="images/diw.svg" alt="Wordcloud de tecnologias web">
+    </div>
+  </div>
+</section>
