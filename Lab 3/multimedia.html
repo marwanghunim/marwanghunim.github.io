@@ -1,82 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Multimedia</title>
-    <style>
-        .fotografias {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multimedia</title>
+  <style>
+    :root{
+      --label-width: 60px;
+      --img-h: 180px;
+      --gap: 10px;
+      --container-max: 900px;
+    }
 
-        .fotografias img {
-            width: 150px;
-            border-radius: 20px;
-        }
-    </style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Arial, sans-serif;
+      background:#f5c400;
+      color:#111;
+      line-height:1.4;
+    }
+    header{padding:20px;text-align:center;background:#d62828;color:#fff;}
+    nav{padding:10px;text-align:center;background:#111;}
+    nav a{color:#fff;text-decoration:none;margin:0 12px;font-weight:600}
+
+    main{padding:18px 10px 60px;}
+
+    /* IMAGEM DESTAQUE */
+    .imagem-destaque{
+      position:relative;
+      width:100%;
+      height:90vh;
+      overflow:hidden;
+    }
+    .imagem-destaque img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .imagem-destaque .texto-central{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      color:#fff;
+      font-size:6vw;
+      font-weight:700;
+      text-shadow:0 0 15px rgba(0,0,0,0.6);
+      text-align:center;
+      padding:0 8px;
+    }
+
+    /* GALERIA */
+    .fotografias-wrapper{
+      width:80%;
+      max-width:var(--container-max);
+      margin:28px auto;
+    }
+
+    .fotografias-container{
+      display:flex;
+      background:#ffb400;
+      border-radius:8px;
+      padding:10px;
+      overflow:hidden;
+      border:2px solid #000;
+      transition: all 1.2s ease;
+      height: calc( (var(--img-h) * 2) + (var(--gap) * 1) + 20px );
+    }
+
+    /* label vertical fixo */
+    .fotografias-label{
+      width:var(--label-width);
+      min-width:var(--label-width);
+      background:#111;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      margin-right:10px;
+      border:4px double #000; /* borda dupla */
+      border-radius:4px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      align-self: stretch; /* ocupa altura total da caixa */
+    }
+
+    /* viewport que expande */
+    .fotografias-viewport{
+      overflow:hidden;
+      width: calc( (100% - var(--label-width)) / 4 );
+      transition: width 1.2s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .fotografias-grid{
+      display:grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, var(--img-h));
+      gap: var(--gap);
+      width:100%;
+    }
+
+    .fotografias-grid img{
+      width:100%;
+      height: var(--img-h);
+      object-fit:cover;
+      border-radius:6px;
+      display:block;
+      transform-origin:center;
+      transition: transform 0.35s ease, opacity 0.45s ease;
+    }
+
+    .fotografias-grid img:hover{ transform:scale(1.04); }
+
+    /* inicial: só as 2 primeiras visíveis */
+    .fotografias-grid img:nth-child(-n+2){ opacity:1; }
+    .fotografias-grid img:nth-child(n+3){ opacity:0; }
+
+    /* hover: expande e mostra todas */
+    .fotografias-container:hover .fotografias-viewport{
+      width: calc(100% - var(--label-width));
+    }
+    .fotografias-container:hover .fotografias-grid img{ opacity:1; }
+    .fotografias-container:hover .fotografias-grid img:nth-child(3){ transition-delay:0.05s; }
+    .fotografias-container:hover .fotografias-grid img:nth-child(4){ transition-delay:0.10s; }
+    .fotografias-container:hover .fotografias-grid img:nth-child(5){ transition-delay:0.14s; }
+    .fotografias-container:hover .fotografias-grid img:nth-child(6){ transition-delay:0.18s; }
+    .fotografias-container:hover .fotografias-grid img:nth-child(7){ transition-delay:0.22s; }
+    .fotografias-container:hover .fotografias-grid img:nth-child(8){ transition-delay:0.26s; }
+
+    /* VIDEO */
+    .video-container{ width:80%; max-width:var(--container-max); margin:30px auto; }
+    .video-container iframe{ width:100%; height:480px; border:0; border-radius:8px; display:block; }
+
+    /* POESIA */
+    .poesia{ width:80%; max-width:var(--container-max); margin:30px auto; background:transparent; padding:6px 8px; }
+    .poesia h3{ margin-bottom:8px; }
+    .poesia div p{ margin-bottom:6px; }
+  </style>
 </head>
-
 <body>
-    <header>
-        <h1>Nápoles</h1>
-    </header>
 
-    <main>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="local.html">Localização</a>
-            <a href="multimedia.html">Multimedia</a>
-            <a href="info.html">Informação</a>
-        </nav>
+  <header>
+    <h1>Nápoles</h1>
+  </header>
 
-        <h2>Multimedia</h2>
-        <p>
-            <a href="#fotografias">Fotografias</a> |
-            <a href="#video">Vídeo</a> |
-            <a href="#poesia">Poesia</a>
-        </p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="local.html">Localização</a>
+    <a href="multimedia.html">Multimedia</a>
+    <a href="info.html">Informação</a>
+  </nav>
 
-        <p>Nesta página encontra conteúdos multimédia</p>
+  <main>
+    <h2 style="text-align:center;margin-top:18px">Multimedia</h2>
+    <p style="text-align:center;margin-bottom:10px">
+      <a href="#fotografias">Fotografias</a> |
+      <a href="#video">Vídeo</a> |
+      <a href="#poesia">Poesia</a>
+    </p>
 
-        <section>
-            <h3>Fotografias</h3>
-            <div class="fotografias">
-                <img src="images/Naples 2.jpeg" alt="Foto 1">
-                <img src="images/Naples 3.jpeg" alt="Foto 2">
-                <img src="images/Naples 4.jpeg" alt="Foto 3">
-                <img src="images/Naples 5.jpeg" alt="Foto 4">
-                <img src="images/Naples 6.jpeg" alt="Foto 5">
-                <img src="images/Naples 7.jpeg" alt="Foto 6">
-                <img src="images/Naples 8.jpeg" alt="Foto 7">
-                <img src="images/Naples 9.jpeg" alt="Foto 8">
-            </div>
-        </section>
+    <section class="imagem-destaque" aria-label="Imagem destaque">
+      <img src="images/Naples 10.jpg" alt="Vista de Nápoles">
+      <div class="texto-central">Nápoles, paixão entre mar e vulcão</div>
+    </section>
 
-        <section>
-            <h3>Vídeo</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gSV-ArwafK0?si=xrQ7cB9SlNnnKNrw" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
+    <section id="fotografias" class="fotografias-wrapper" aria-label="Galeria de fotografias">
+      <h3 style="text-align:center;margin-bottom:10px">Fotografias</h3>
 
-        <section>
-            <h3>Poesia</h3>
-            <div>
-                <p>Nápoles canta ao pé do Vesúvio ardente,</p>
-                <p>O mar reflete um azul reluzente.</p>
-                <p>Ruas de pedra, segredos no ar,</p>
-                <p>A vida pulsa, difícil de parar.</p>
-                <p>Doce canção que a brisa transporta,</p>
-                <p>A alma italiana abre-lhe a porta.</p>
-                <p>Nápoles é fogo, paixão que conforta.</p>
-    </div>
-        </section>
-    </main>
+      <div class="fotografias-container" role="region" aria-label="Galeria interativa">
+        <div class="fotografias-label">Imagens</div>
+        <div class="fotografias-viewport">
+          <div class="fotografias-grid">
+            <img src="images/Naples 2.jpeg" alt="Foto 1">
+            <img src="images/Naples 3.jpeg" alt="Foto 2">
+            <img src="images/Naples 4.jpeg" alt="Foto 3">
+            <img src="images/Naples 5.jpeg" alt="Foto 4">
+            <img src="images/Naples 6.jpeg" alt="Foto 5">
+            <img src="images/Naples 7.jpeg" alt="Foto 6">
+            <img src="images/Naples 8.jpeg" alt="Foto 7">
+            <img src="images/Naples 9.jpeg" alt="Foto 8">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="video-container" aria-label="Video">
+      <h3 style="margin-bottom:12px">Vídeo</h3>
+      <iframe src="https://www.youtube.com/embed/gSV-ArwafK0?si=xrQ7cB9SlNnnKNrw" title="YouTube player" allowfullscreen></iframe>
+    </section>
+
+    <section id="poesia" class="poesia" aria-label="Poesia">
+      <h3>Poesia</h3>
+      <div>
+        <p>Nápoles canta ao pé do Vesúvio ardente,</p>
+        <p>O mar reflete um azul reluzente.</p>
+        <p>Ruas de pedra, segredos no ar,</p>
+        <p>A vida pulsa, difícil de parar.</p>
+        <p>Doce canção que a brisa transporta,</p>
+        <p>A alma italiana abre-lhe a porta.</p>
+        <p>Nápoles é fogo, paixão que conforta.</p>
+      </div>
+    </section>
+
+  </main>
 </body>
-
 </html>
