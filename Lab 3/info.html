@@ -2,96 +2,183 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Informação</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        table {
-            width: 60%;
-            border-collapse: collapse;
-            margin: 30px auto;
-            font-family: Arial, sans-serif;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
+  <meta charset="UTF-8">
+  <title>Informação</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* === GRID LAYOUT === */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+      grid-template-rows: auto;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        th,
-        td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
-        }
+    h2 {
+      text-align: center; /* centraliza o título */
+    }
 
-        th {
-            background-color: #003566;
-            color: #ffffff;
-            /* vermelho para cabeçalhos */
-        }
+    .intro {
+      grid-column: 1 / span 2; /* ocupa 2 colunas */
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-        td {
-            color: #07080a;
-            /* azul para os dados */
-        }
+      /* centralizar conteúdo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
 
-        caption {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #09140a;
-        }
-    </style>
+    table {
+      grid-column: 3 / span 2; /* tabela ocupa as 2 colunas da direita */
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    th,
+    td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #003566;
+      color: #ffffff;
+    }
+
+    td {
+      color: #07080a;
+    }
+
+    caption {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #09140a;
+    }
+
+    .curiosidades {
+      grid-column: 1 / span 2;
+      background: #fefefe;
+      border: 2px dashed #003566;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    /* Caixas para as imagens do Pixabay */
+    .pixabay {
+      background-color: #e0e0e0; /* cinzento para placeholder */
+      border-radius: 10px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .pixabay.one {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    .pixabay.two {
+      grid-column: 1 / span 2;
+      grid-row: 3;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .intro,
+      table,
+      .curiosidades,
+      .pixabay {
+        grid-column: 1;
+      }
+    }
+  </style>
 </head>
+
 <header>
-    <h1>Nápoles</h1>
+  <h1>Nápoles</h1>
 </header>
 
 <body>
+  <main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="info.html">Informação</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+    </nav>
 
-    <main>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="info.html">Informação</a>
-            <a href="local.html">Localização</a>
-            <a href="multimedia.html">Multimédia</a>
-        </nav>
-        <h2>Informações</h2>
-        <p>A tabela abaixo apresenta informações essenciais sobre Nápoles.</p>
-        <table>
-            <caption>Dados sobre Nápoles</caption>
-            <tr>
-                <th rowspan="2">Demografia</th>
-                <td>População</td>
-                <td>959.000 hab</td>
-            </tr>
-            <tr>
-                <td>Densidade Populacional</td>
-                <td>7.675 hab/km²</td>
-            </tr>
-            <tr>
-                <th rowspan="2">Geografia</th>
-                <td>Área</td>
-                <td>117.3 km²</td>
-            </tr>
-            <tr>
-                <td colspan="2">Localização: Nápoles, Itália</td>
-            </tr>
-            <tr>
-                <th>Website</th>
-                <td colspan="2"><a href="https://www.visitnaples.eu/en" target="_blank">www.visitnaples.eu</a></td>
-            </tr>
-        </table>
+    <h2>Informações</h2>
+
+    <div class="grid-container">
+      <div class="intro">
+        <p>A tabela ao lado apresenta informações essenciais sobre Nápoles.</p>
+      </div>
+
+      <table>
+        <caption>Dados sobre Nápoles</caption>
+        <tr>
+          <th rowspan="2">Demografia</th>
+          <td>População</td>
+          <td>959.000 hab</td>
+        </tr>
+        <tr>
+          <td>Densidade Populacional</td>
+          <td>7.675 hab/km²</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Geografia</th>
+          <td>Área</td>
+          <td>117.3 km²</td>
+        </tr>
+        <tr>
+          <td colspan="2">Localização: Nápoles, Itália</td>
+        </tr>
+        <tr>
+          <th>Website</th>
+          <td colspan="2"><a href="https://www.visitnaples.eu/en" target="_blank">www.visitnaples.eu</a></td>
+        </tr>
+      </table>
+
+      <div class="curiosidades">
         <h3>Curiosidades sobre Nápoles</h3>
         <ul>
-            <li>Nápoles é a cidade onde nasceu a pizza Margherita!</li>
-            <li>O centro histórico de Nápoles é Património Mundial da UNESCO!</li>
-            <li>A cidade fica junto ao vulcão ativo Vesúvio!</li>
-            <li>É a terceira maior cidade de Itália, depois de Roma e Milão!</li>
-            <li>Nápoles tem um dos teatros de ópera mais antigos do mundo, o Teatro di San Carlo!</li>
+          <li>Nápoles é a cidade onde nasceu a pizza Margherita!</li>
+          <li>O centro histórico de Nápoles é Património Mundial da UNESCO!</li>
+          <li>A cidade fica junto ao vulcão ativo Vesúvio!</li>
+          <li>É a terceira maior cidade de Itália, depois de Roma e Milão!</li>
+          <li>Nápoles tem um dos teatros de ópera mais antigos do mundo, o Teatro di San Carlo!</li>
         </ul>
+      </div>
 
-    </main>
-    <footer>
-        <p>DIW 2025</p>
-    </footer>
+      <!-- PROBLEMA HELP-->
+      <div class="pixabay one"><a href="images/Naples 11.jpeg"></a></div>
+      <div class="pixabay two"><a href="images/Naples 12.jpeg"></a></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>DIW 2025</p>
+  </footer>
 </body>
 
 </html>

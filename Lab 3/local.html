@@ -6,11 +6,12 @@
     <title>Localização</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<header>
-    <h1>Nápoles</h1>
-</header>
 
 <body>
+    <header>
+        <h1>Nápoles</h1>
+    </header>
+
     <main>
         <nav>
             <a href="index.html">Home</a>
@@ -18,13 +19,23 @@
             <a href="local.html">Localização</a>
             <a href="multimedia.html">Multimédia</a>
         </nav>
-        <img src="images/naples 1.jpeg" alt="Naples" width="500" height="300">
-        <h2>Localização</h2>
-        <p>Nápoles é uma das cidades mais vibrantes de Itália, conhecida pela sua rica herança histórica, ruas cheias de vida, gastronomia autêntica como a pizza, e vistas deslumbrantes do Vesúvio e da baía, onde tradição e modernidade se encontram</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96570.19839383678!2d14.16420169756913!3d40.85390413333216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0866db7afaeb%3A0xd23a43cc658cb87e!2sNaples%2C%20Metropolitan%20City%20of%20Naples%2C%20Italy!5e0!3m2!1sen!2spt!4v1758817862975!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>">
+
+        <!-- Image Section -->
+        <section class="image-section">
+            <img src="images/naples 1.jpeg" alt="Naples" width="500" height="300">
+        </section>
+
+        <!-- Map + Text Section -->
+        <section class="localizacao-container">
+            <p>Nápoles é uma das cidades mais vibrantes de Itália, conhecida pela sua rica herança histórica, ruas cheias de vida, gastronomia autêntica como a pizza, e vistas deslumbrantes do Vesúvio e da baía, onde tradição e modernidade se encontram.</p>
+
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96570.19839383678!2d14.16420169756913!3d40.85390413333216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0866db7afaeb%3A0xd23a43cc658cb87e!2sNaples%2C%20Metropolitan%20City%20of%20Naples%2C%20Italy!5e0!3m2!1sen!2spt!4v1758817862975!5m2!1sen!2spt" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
     </main>
+
     <footer>
         <p>DIW 2025</p>
     </footer>
