@@ -1,242 +1,146 @@
 const produtos = [
   {
     "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    "rating": {
-      "rate": 3.9,
-      "count": 120
-    }
-  },
-  {
-    "id": 2,
-    "title": "Mens Casual Premium Slim Fit T-Shirts ",
-    "price": 22.3,
-    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-    "rating": {
-      "rate": 4.1,
-      "count": 259
-    }
-  },
-  {
-    "id": 3,
-    "title": "Mens Cotton Jacket",
-    "price": 55.99,
-    "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    "title": "O mundo do binário",
+    "price": 22.5,
+    "description": "Mostra ao mundo que percebes de matemática fora da caixa! Com esta t-shirt, podes provar que 1 + 1 = 10... mas só para os génios da programação e entusiastas do sistema binário. Perfeita para descontrair o ambiente e deixar toda a gente a pensar. Quem disse que estilo e código não combinam?",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/tshirt-1-1.png",
     "rating": {
       "rate": 4.7,
-      "count": 500
-    }
-  },
-  {
-    "id": 4,
-    "title": "Mens Casual Slim Fit",
-    "price": 15.99,
-    "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-    "rating": {
-      "rate": 2.1,
-      "count": 430
-    }
-  },
-  {
-    "id": 5,
-    "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-    "price": 695,
-    "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 4.6,
-      "count": 400
-    }
-  },
-  {
-    "id": 6,
-    "title": "Solid Gold Petite Micropave ",
-    "price": 168,
-    "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 3.9,
-      "count": 70
-    }
-  },
-  {
-    "id": 7,
-    "title": "White Gold Plated Princess",
-    "price": 9.99,
-    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 3,
-      "count": 400
-    }
-  },
-  {
-    "id": 8,
-    "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-    "price": 10.99,
-    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 1.9,
-      "count": 100
-    }
-  },
-  {
-    "id": 9,
-    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-    "price": 64,
-    "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-    "rating": {
-      "rate": 3.3,
-      "count": 203
+      "count": 200
     }
   },
   {
     "id": 10,
-    "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-    "price": 109,
-    "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    "title": "As 6 fases do debugging",
+    "price": 13,
+    "description": "A jornada épica de todo programador, onde cada erro é uma montanha a escalar. Começas com uma negação absoluta, segues para o clássico \"Isso não acontece na minha máquina!\", até chegares à aceitação... mas lá no fundo sabes que a solução nunca é tão simples quanto parece. Se já passaste por todas estas fases (e muitas mais!), esta t-shirt é para ti! Porque quem programa sabe que o verdadeiro bug está sempre a um \"não deveria acontecer\" de distância! 😅💻🛠️",
+    "category": "Canecas",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/mug-debugging.png",
     "rating": {
-      "rate": 2.9,
-      "count": 470
+      "rate": 3.8,
+      "count": 230
     }
   },
   {
-    "id": 11,
-    "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-    "price": 109,
-    "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    "id": 7,
+    "title": "Hello World",
+    "price": 7.5,
+    "description": "Para quem vive entre o código e o estilo! Estas meias são a combinação perfeita de geek e confortável, com 101010101 para os amantes de binário e Hello World para os que sabem que toda jornada começa com um simples \"olá\" ao computador. Porque até os pés merecem um pouco de programação! 🧦💻👾",
+    "category": "Meias",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/socks-00.png",
     "rating": {
-      "rate": 4.8,
-      "count": 319
+      "rate": 4.2,
+      "count": 125
     }
   },
   {
     "id": 12,
-    "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-    "price": 114,
-    "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+    "title": "do or do not. no try",
+    "price": 19.85,
+    "description": "Sabias que até o mestre Yoda tem algo a ensinar aos programadores? Quando o código está a falhar, não há espaço para tentar. Ou faz ou não faz — e, se não está a funcionar, o comando \"try\" não vai salvar ninguém! Se és fã de Star Wars e da sabedoria do mestre Jedi, esta t-shirt é para ti. Porque na programação, tal como na Força, não há lugar para meias medidas! ⚡💻👽",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/do-or-do-not.png",
     "rating": {
-      "rate": 4.8,
-      "count": 400
+      "rate": 4.5,
+      "count": 132
     }
   },
   {
-    "id": 13,
-    "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-    "price": 599,
-    "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+    "id": 4,
+    "title": "10 tipos de pessoas",
+    "price": 19.9,
+    "description": "Para os amantes de códigos e piadas geek, esta t-shirt é o que falta para mostrar a tua verdadeira natureza! Porque, sejamos sinceros, há aqueles que sabem que \"10\" não é só o número de uma contagem… é 2 em binário! Se estás no lado dos que entendem, esta é para ti. Para os outros... bem, vamos deixar a matemática para depois! 😎👕",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/tshirt-10.png",
     "rating": {
-      "rate": 2.9,
+      "rate": 4.7,
+      "count": 322
+    }
+  },
+  {
+    "id": 8,
+    "title": "Erro 404: não estou disponível!",
+    "price": 18.5,
+    "description": "Quando o mundo tenta chamar a tua atenção, mas tu estás demasiado ocupado... resolvendo bugs, claro! Esta t-shirt é para aqueles momentos em que o \"não disponível\" é o teu estado natural. Porque, convenhamos, a melhor resposta para muitas coisas na vida é simplesmente um \"Erro 404\". 🖥️🚫",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/tshirt_Error.png",
+    "rating": {
+      "rate": 4.7,
+      "count": 100
+    }
+  },
+  {
+    "id": 6,
+    "title": "não perturbar, estou a programar!",
+    "price": 7.5,
+    "description": "A solução perfeita para quem não consegue desligar, nem quando está de meias! Com estas meias, o código nunca pára. Ideal para aqueles momentos em que o mundo lá fora não entende que \"estou a programar, não me chames\". Porque cada linha de código é uma linha de foco – e quem tem um bug para resolver, não tem tempo para distrações! 🧦💻🚫",
+    "category": "Meias",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/do-not-disturb.png",
+    "rating": {
+      "rate": 3.2,
+      "count": 67
+    }
+  },
+  {
+    "id": 5,
+    "title": "comer, programar, dormir, repetir!",
+    "price": 16.5,
+    "description": "A rotina perfeita para quem vive no loop infinito do código! Esta t-shirt é para quem só precisa de três coisas na vida: comer, codificar e dormir. E repete. Se o teu ciclo de vida é basicamente isso (com algumas pausas para café, claro), então este design foi feito para ti! Ideal para programadores, devs e todos os que sabem que a vida é apenas um código em execução... com alguns erros de vez em quando! 😎💻🍕💤",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/tshirt-eat-sleep-code.png",
+    "rating": {
+      "rate": 4.3,
+      "count": 234
+    }
+  },
+  {
+    "id": 3,
+    "title": "És o CSS do meu HTML",
+    "price": 25,
+    "description": "A combinação perfeita entre estilo e estrutura! Se o teu código HTML sem o teu CSS é como um corpo sem alma, esta t-shirt é para ti. Porque sem um bom design, o conteúdo não brilha! Ideal para quem sabe que a beleza está nos detalhes… e no código. 💻✨",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/tshirt-css.png",
+    "rating": {
+      "rate": 4.9,
       "count": 250
     }
   },
   {
-    "id": 14,
-    "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
-    "price": 999.99,
-    "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+    "id": 9,
+    "title": "odeio.. adoro programar!",
+    "price": 12,
+    "description": "Aquela montanha-russa emocional que só quem programa conhece bem! Quando tudo parece dar errado, e a frustração bate forte, mas de repente... puff, o código funciona! Uma mistura de ódio e amor, porque ser programador é exatamente isso: uma relação complicada, mas cheia de recompensas. Se tu também já passaste por isso, esta t-shirt é para ti! 💻❤️🤦‍♂️",
+    "category": "Canecas",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/mug-programming.png",
     "rating": {
-      "rate": 2.2,
-      "count": 140
+      "rate": 4.6,
+      "count": 99
     }
   },
   {
-    "id": 15,
-    "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-    "price": 56.99,
-    "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-    "rating": {
-      "rate": 2.6,
-      "count": 235
-    }
-  },
-  {
-    "id": 16,
-    "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-    "price": 29.95,
-    "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-    "rating": {
-      "rate": 2.9,
-      "count": 340
-    }
-  },
-  {
-    "id": 17,
-    "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-    "price": 39.99,
-    "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    "id": 2,
+    "title": "Programar: 10% vs. 90%",
+    "price": 20,
+    "description": "Quando achas que já entendeste o problema, mas ainda precisas de mais 3 horas de \"esboços\" no quadro branco. Ideal para quem passa mais tempo a tentar perceber o que está a acontecer do que realmente a programar. Porque ser programador é, antes de tudo, entender o caos antes de o controlar!",
+    "category": "T-shirts",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/tshirt-10-90.png",
     "rating": {
       "rate": 3.8,
-      "count": 679
+      "count": 150
     }
   },
   {
-    "id": 18,
-    "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-    "price": 9.85,
-    "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-    "rating": {
-      "rate": 4.7,
-      "count": 130
-    }
-  },
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 7.95,
-    "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  {
-    "id": 20,
-    "title": "DANVOUY Womens T Shirt Casual Cotton Short",
-    "price": 12.99,
-    "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    "id": 11,
+    "title": "se café vazio...",
+    "price": 14,
+    "description": "O código perfeito para quem sabe que a vida de um programador depende de um único ciclo: se o café acabar, refilamos; se ainda houver café, bebemos. Nada de complicações — apenas lógica pura! Se o teu estado de espírito e produtividade estão diretamente ligados ao nível da tua xícara de café, então esta t-shirt é para ti! ☕💻🔁",
+    "category": "Canecas",
+    "image": "https://deisishop.pythonanywhere.com/media/produto_imagens/muf-coffee.png",
     "rating": {
       "rate": 3.6,
-      "count": 145
+      "count": 140
     }
   }
 ]

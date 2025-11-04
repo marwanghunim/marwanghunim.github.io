@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #e0e7ff;
+    line-height: 1.7;
+    padding: 32px;
+    font-size: 1.1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #1e40af;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+nav a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color .2s;
+}
+
+nav a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#produtos {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+#produtos article {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+    padding: 24px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform .3s, box-shadow .3s;
+}
+
+#produtos article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .18);
+}
+
+#produtos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+#produtos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+#produtos p {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+#produtos span {
+    font-weight: 700;
+    color: #1e40af;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+button {
+    background: #1e40af;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: background .3s;
+}
+
+button:hover {
+    background: #1e3a8a;
+}
+
+#cesto {
+    flex: 1;
+    min-width: 360px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+    padding: 24px;
+    max-height: 720px;
+    overflow-y: auto;
+    color: #1e40af;
+}
+
+#cesto article {
+    background: #eff6ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #1e40af;
+}
+
+#cesto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#cesto button {
+    background: #dc2626;
+    font-size: 1rem;
+    padding: 8px 14px;
+    margin-top: 8px;
+}
+
+#cesto button:hover {
+    background: #b91c1c;
+}
+
+#cesto p.total {
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-top: 2px solid #bfdbfe;
+    padding-top: 16px;
+    margin-top: 20px;
+    color: #1e40af;
+}
+
+/* Filter */
+#filtro-categorias {
+    display: flex;
+    gap: 16px;
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#filtro-categorias label {
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+#filtro-categorias input[type="text"],
+#filtro-categorias select {
+    border: 2px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 1.05rem;
+    background: #fff;
+    outline: none;
+    transition: border .3s;
+    flex: 1;
+    min-width: 220px;
+}
+
+#filtro-categorias input:focus,
+#filtro-categorias select:focus {
+    border-color: #1e40af;
+}
+
+/* Purchase */
+#compra {
+    background: #fff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+    margin-top: 32px;
+}
+
+#compra h2 {
+    color: #1e40af;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+#compra label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #133a7a;
+}
+
+#compra input[type="text"] {
+    width: 100%;
+    max-width: 340px;
+    border: 2px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 1.05rem;
+}
+
+#compra button {
+    margin-top: 16px;
+}
+
+footer {
+    margin-top: 48px;
+    text-align: center;
+    color: #64748b;
+    font-size: 1rem;
+}

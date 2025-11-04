@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+</head>
+
+<body>
+    <header>
+        <h1>Loja</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cesto">Cesto</a></li>
+            </ul>
+        </nav>
+
+        <div id="filtro-categorias">
+            <input type="text" id="pesquisa" placeholder="Procurar produto...">
+
+            <label for="categoria">Categoria:</label>
+            <select id="categoria">
+                <option value="">Todas</option>
+            </select>
+
+            <label for="ordenar">Ordenar:</label>
+            <select id="ordenar">
+                <option value="">Padrão</option>
+                <option value="asc">Preço ↑</option>
+                <option value="desc">Preço ↓</option>
+            </select>
+        </div>
+    </header>
+
+    <<main>
+        <section id="produtos"></section>
+        <section id="cesto"></section>
+        </main>
+        <footer>
+            <p>DIW 2025</p>
+        </footer>
+
+        <script src="Scripts/produtos.js"></script>
+        <script src="Scripts/Main.js"></script>
+</body>
